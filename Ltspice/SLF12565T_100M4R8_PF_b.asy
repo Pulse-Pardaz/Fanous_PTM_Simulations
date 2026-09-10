@@ -1,0 +1,21 @@
+Version 4
+SymbolType CELL
+LINE Normal -40 0 -64 0
+LINE Normal 40 0 64 0
+ARC Normal -40 -16 -8 16 -13 10 -40 0
+ARC Normal -16 -16 16 16 11 10 -11 10
+ARC Normal 8 -16 40 16 40 0 13 10
+TEXT 0 -32 Center 2 TDK
+TEXT 4 -57 Center 2 SLF12565T-100M4R8-PF
+TEXT -3 -81 Center 2 L=10uH at 1kHz
+WINDOW 0 -80 -24 Left 2
+SYMATTR SpiceModel SLF12565T_100M4R8_PF_b
+SYMATTR Prefix X
+SYMATTR ModelFile SLF12565T_100M4R8_PF_b_LTspice.mod
+SYMATTR Description Inductor
+PIN -64 0 NONE 8
+PINATTR PinName 1
+PINATTR SpiceOrder 1
+PIN 64 0 NONE 8
+PINATTR PinName 2
+PINATTR SpiceOrder 2
