@@ -1,0 +1,28 @@
+* Copyright (c) 1998-2026 Analog Devices, Inc.  All rights reserved.
+*
+.subckt BuckConverter VIN GND VOUT
+X§U1 N001 N004 NC_01 0 N002 N003 VIN N005 0 TPS54360_TRANS STEADY_STATE=0 ;§pnba BOOT)COMP)EN)GND)SW)RT_CLK)VIN)FB)ThermalPAD
+C1 N002 N001 100n V=50 Rser=280m
+R1 N003 GND 200K tol=1 pwr=0.25
+D1 GND N002 PDS760
+C11 VOUT GND 68µ V=50 Rser=80m
+C12 VOUT GND 68µ V=50 Rser=80m
+R2 VOUT N005 60.4 tol=1
+R3 N005 GND 11.5 tol=1
+R5 N004 P001 20K
+C9 P001 GND 3.3n Rser=1m
+C10 N004 GND 100p Rser=1u
+X§U2 N002 VOUT SLF12565T_100M4R8_PF_b ;§pnba 1)2
+X§C4 VIN 0 C2012X5R2A475K125AC_s ;§pnba n1)n2
+X§C5 VIN 0 C2012X5R2A475K125AC_s ;§pnba n1)n2
+X§C6 VIN 0 C2012X5R2A475K125AC_s ;§pnba n1)n2
+X§C7 VIN 0 C2012X5R2A475K125AC_s ;§pnba n1)n2
+X§C8 VIN 0 C2012X5R2A475K125AC_s ;§pnba n1)n2
+V1 VIN GND 28v Rser=1m
+* Library below included based on ModelFile attribute of instance X§C4, X§C5, X§C6, X§C7, X§C8 (C:\Users\Peasant\Documents\LTspice\C2012X5R2A475K125AC_s.asy)
+.lib c2012x5r2a475k125ac_s.mod
+* Library below included based on ModelFile attribute of instance X§U2 (C:\Users\Peasant\Documents\LTspice\SLF12565T_100M4R8_PF_b.asy)
+.lib SLF12565T_100M4R8_PF_b_LTspice.mod
+* Library below included based on ModelFile attribute of instance X§U1 (C:\Users\Peasant\Documents\LTspice\TPS54360_TRANS.asy)
+.lib TPS54360_TRANS.LIB
+.ends BuckConverter
